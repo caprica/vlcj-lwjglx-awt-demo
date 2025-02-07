@@ -71,7 +71,7 @@ public class LwjglxDemo {
         videoSurface = mediaPlayerFactory.videoSurfaces().newVideoSurface(VideoEngine.libvlc_video_engine_opengl, videoEngineCallback);
         mediaPlayer.videoSurface().set(videoSurface);
 
-        JFrame f = new JFrame("Dorpal");
+        JFrame f = new JFrame("vlcj lwjglx-awt demo");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLayout(new BorderLayout());
         GLData data = new GLData();
