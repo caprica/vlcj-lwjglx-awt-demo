@@ -68,7 +68,7 @@ public class LwjglxDemo {
         mediaPlayerFactory = new MediaPlayerFactory();
 
         mediaPlayer = mediaPlayerFactory.mediaPlayers().newEmbeddedMediaPlayer();
-        videoSurface = mediaPlayerFactory.videoSurfaces().newVideoSurface(VideoEngine.libvlc_video_engine_opengl, videoEngineCallback);
+        videoSurface = mediaPlayerFactory.videoSurfaces().newVideoSurface(VideoEngine.OPENGL, videoEngineCallback);
         mediaPlayer.videoSurface().set(videoSurface);
 
         JFrame f = new JFrame("vlcj lwjglx-awt demo");
