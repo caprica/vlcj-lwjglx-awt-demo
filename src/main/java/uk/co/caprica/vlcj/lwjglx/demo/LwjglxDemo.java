@@ -22,6 +22,9 @@ package uk.co.caprica.vlcj.lwjglx.demo;
 import org.lwjgl.opengl.*;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 import static org.lwjgl.opengl.GL.*;
 import static org.lwjgl.opengl.GL11.*;
@@ -78,6 +81,18 @@ public class LwjglxDemo {
         f.setSize(800, 800);
         f.setVisible(true);
         f.transferFocus();
+
+        // Resize is flickery, again this is just proof-of-concept, probably some synchronisation is missing or something
+        canvas.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                if (windowCallback == null) {
+                    return;
+                }
+                Component c = e.getComponent();
+                windowCallback.setSize(c.getWidth(), c.getHeight());
+            }
+        });
 
         Runnable renderLoop = new Runnable() {
             @Override

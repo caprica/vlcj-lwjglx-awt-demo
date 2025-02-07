@@ -9,6 +9,3 @@ components.
 
 The demo does not pretend to use best practices or idioms for OpenGL, it is rather a minimal proof-on-concept to show
 how the integration could work.
-
-Specifially this does not (yet) integration video engine resizing, although that should be straightforward (no reason
-why it wouldn't work).
