@@ -7,5 +7,5 @@ using the https://github.com/LWJGLX/lwjgl3-awt library.
 This basically enables adding an OpenGL media player to an AWT component, making use of layouts and other normal Java UI
 components.
 
-The demo does not pretend to use best practices or idioms for OpenGL, it is rather a minimal proof-on-concept to show
+The demo does not pretend to use best practices or idioms for OpenGL, it is rather a minimal proof-of-concept to show
 how the integration could work.
